@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: montserrat;
+}
+body{
+    background:linear-gradient(to left, #a515ac 20%, #c90e67 100% );
+}
+
+.header{
+    background-color:green;
+    overflow:hidden;
+    display: flex;
+    justify-content: left;
+    padding: 2px 1px;
+    margin: 0px auto;
+}
+
+.img{
+    width: 40px;
+    border-radius: 50px;
+    border: 1px solid;
+    padding: 2px 2px;
+    margin: 6px 10px;
+    cursor: pointer;
+}
+
+.logo {
+    cursor: pointer;
+    margin: 10px 1px;
+}
+
+.main-menu {
+    display: flex;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    padding-left: 35px;
+}
+
+.menu a {
+    text-transform:uppercase;
+    font-size: smaller;
+    text-decoration: none;
+    margin: -2px -2px;
+    color: black;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color:#c90e67;
+}
+
+.menu-1 {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    padding-left: 565px;
+    padding-right: 5px;
+}
+
+.menu-1 a {
+    text-transform:none;
+    font-size: small;
+    font-weight: bold;
+    text-decoration: none;
+    color:#c90e67;
+}
+
+.menu-1 a:hover {
+    color: black;
+}
+
+.start {
+    text-decoration: none;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-color: #081ccc;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.img-1 {
+    display: flex;
+}
+
+.start:hover {
+    color: #a515ac;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    font-size: small;
+}
+
+/* hamburger*/
+#menu-toggle {
+    display: none;
+}
+
+#hamburger-btn {
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    order: 1;
+}
+
+@media screen and (max-width: 1023px) {
+   .main-menu {
+    position:fixed;
+    left: -100%;
+    top: 75px;
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    background: #a515ac;
+    flex-direction: column;
+    transition: 0.3s ease;
+   }
+
+   .header #menu-toggle: checked .main-menu {
+    left: 0;
+   }
+
+   .header .hamburger-btn {
+    display: block;
+   }
+
+   .header .menu-1 {
+    display: none;
+   }
+}
